@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Dirgahayu Republik Indonesia Ke-81</title>
+  <meta name="description" content="Perayaan interaktif 81 tahun kemerdekaan Republik Indonesia — jelajahi kepulauan Nusantara dalam pengalaman 3D sinematik." />
+  <meta property="og:title" content="Dirgahayu Republik Indonesia Ke-81" />
+  <meta property="og:description" content="Jelajahi Nusantara dalam pengalaman 3D sinematik." />
+  <meta name="theme-color" content="#04050a" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='15' fill='%23e11d2e'/%3E%3Ccircle cx='16' cy='16' r='8' fill='%23ffffff'/%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- Kanvas 3D -->
+  <div id="scene"></div>
+
+  <!-- Efek sinematik (vignette + grain) -->
+  <div class="fx" aria-hidden="true"></div>
+
+  <!-- Header / tipografi utama -->
+  <header class="hero">
+    <div class="eyebrow"><span class="eyebrow-dot"></span><span>17 Agustus 2026 — HUT Ke-81</span></div>
+    <h1 class="hero-title">DIRGAHAYU</h1>
+    <div class="hero-sub">
+      <h2>REPUBLIK INDONESIA</h2>
+      <span class="ke81">KE-81</span>
+    </div>
+    <p class="hero-tagline">Merayakan 81 tahun perjalanan bangsa, dari Sabang sampai Merauke.</p>
+  </header>
+
+  <!-- Countdown -->
+  <div class="countdown glass" id="countdown">
+    <div class="countdown-label" id="cd-label">Menuju 17 Agustus 2026</div>
+    <div class="countdown-time" id="cd-time">
+      <span id="cd-d">--</span><i>:</i><span id="cd-h">--</span><i>:</i><span id="cd-m">--</span><i>:</i><span id="cd-s">--</span>
+    </div>
+    <div class="countdown-caption" id="cd-cap">Menyiapkan perayaan…</div>
+  </div>
+
+  <!-- Panel kontrol pulau -->
+  <nav class="nodes" id="nodes" aria-label="Fokus pulau">
+    <button class="node" data-region="sumatera">
+      <span class="node-idx">01</span><span class="node-dot"></span><span class="node-name">Sumatera</span>
+    </button>
+    <button class="node" data-region="jawa">
+      <span class="node-idx">02</span><span class="node-dot"></span><span class="node-name">Jawa</span>
+    </button>
+    <button class="node" data-region="kalimantan">
+      <span class="node-idx">03</span><span class="node-dot"></span><span class="node-name">Kalimantan</span>
+    </button>
+    <button class="node" data-region="sulawesi">
+      <span class="node-idx">04</span><span class="node-dot"></span><span class="node-name">Sulawesi</span>
+    </button>
+    <button class="node" data-region="bali">
+      <span class="node-idx">05</span><span class="node-dot"></span><span class="node-name">Bali &amp; Nusa Tenggara</span>
+    </button>
+    <button class="node" data-region="maluku">
+      <span class="node-idx">06</span><span class="node-dot"></span><span class="node-name">Maluku</span>
+    </button>
+    <button class="node" data-region="papua">
+      <span class="node-idx">07</span><span class="node-dot"></span><span class="node-name">Papua</span>
+    </button>
+  </nav>
+
+  <!-- Banner fokus pulau -->
+  <div class="focus-banner" id="focus-banner" aria-live="polite">
+    <div class="focus-name" id="focus-name">NUSANTARA</div>
+    <div class="focus-desc" id="focus-desc">Dari Sabang sampai Merauke — ribuan pulau dalam satu kesatuan.</div>
+  </div>
+
+  <!-- Petunjuk -->
+  <div class="hint" id="hint">Seret untuk memutar &nbsp;•&nbsp; Gulir untuk memperbesar &nbsp;•&nbsp; Klik pulau untuk fokus</div>
+
+  <!-- Badge glassmorphism -->
+  <div class="badge glass" id="badge">
+    <span class="badge-mark" aria-hidden="true"></span>
+    <span class="badge-text">DESIGNED &amp; DEVELOPED BY <strong>@jenius.pemalas</strong></span>
+  </div>
+
+  <!-- Loader -->
+  <div class="loader" id="loader">
+    <div class="loader-mark" aria-hidden="true"><span></span></div>
+    <div class="loader-title">DIRGAHAYU</div>
+    <div class="loader-sub">REPUBLIK INDONESIA KE-81</div>
+    <div class="loader-bar"><div class="loader-fill" id="loader-fill"></div></div>
+    <div class="loader-pct" id="loader-pct">0%</div>
+  </div>
+
+  <noscript>
+    <div style="position:fixed;inset:0;display:flex;align-items:center;justify-content:center;background:#04050a;color:#f2f3f7;font-family:sans-serif;padding:24px;text-align:center;">
+      Dirgahayu Republik Indonesia Ke-81! Aktifkan JavaScript untuk menikmati pengalaman 3D interaktif ini.
+    </div>
+  </noscript>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>

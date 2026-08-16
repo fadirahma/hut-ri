@@ -1,0 +1,21 @@
+{
+  "name": "dirgahayu-ri-81",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Pengalaman 3D interaktif — Dirgahayu Republik Indonesia ke-81",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "smoke": "node scripts/smoke.mjs"
+  },
+  "dependencies": {
+    "three": "^0.170.0"
+  },
+  "devDependencies": {
+    "pngjs": "^7.0.0",
+    "puppeteer-core": "^25.7.0",
+    "vite": "^5.4.8"
+  }
+}
